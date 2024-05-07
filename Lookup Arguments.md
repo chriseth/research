@@ -16,7 +16,8 @@ Observation: This is true if and only if the following polynomials are identical
 $$p_A(X) = \prod_{i=1}^n (X - a_i) \qquad
 p_B(X) = \prod_{i=1}^n (X - b_i)$$
 
-**Idea:** Check the evaluation of the two polynomials at a random point.
+**Idea:** Check the evaluation of the two polynomials at a random point. We do this using
+a so-called "grand product argument":
 
 We can check $\frac{p_A(\beta)}{p_B(\beta)} = 1$ iteratively by addig a witness column $z$ and a random challenge $\beta$ with the following constraints:
 
