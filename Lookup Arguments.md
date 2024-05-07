@@ -37,17 +37,17 @@ Idea: If $X$ changes, then it has to be equal to $Y$, i.e. $Y$ has to change at 
 
 To show $A \subseteq B$, show 
 
-$ \prod_{i=1}^n (X - a_i) = \prod_{i=1}^n (X - b_i)^{m_i}$
+#$ \prod_{i=1}^n (X - a_i) = \prod_{i=1}^n (X - b_i)^{m_i} $$
 
 where $m_i$ is the multiplicitiy of $b_i$ in $A$ (which can be zero).
 
 If we now take the logarithm on both sides, this turns into
 
-$ \sum_{i=1}^n \log(X - a_i) = \sum_{i=1}^n m_i \log (X - b_i)$
+$$ \sum_{i=1}^n \log(X - a_i) = \sum_{i=1}^n m_i \log (X - b_i) $$
 
 And as a next step, we can take the derivative:
 
-$ \sum_{i=1}^n \frac{1}{X - a_i} = \sum_{i=1}^n \frac{m_i}{X - b_i}$
+$$ \sum_{i=1}^n \frac{1}{X - a_i} = \sum_{i=1}^n \frac{m_i}{X - b_i} $$
 
 This representation is equivalent as long as the size of the sets is less than the
 characteristic of the field.

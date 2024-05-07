@@ -22,13 +22,11 @@ For this, we precompute some $N'$ such that $NN' \equiv_{R} -1$.
 
 Then, on input $x \leq RN - 1$ we compute:
 
-\[
-\begin{align}
+$$ \begin{align}
     m &= (x \bmod R)N' \bmod R\\
     y &= (x + mN) / R\\
     \texttt{if } y &\geq N \texttt{ \{ } y - N \texttt{ \} else \{ } y \texttt{ \}}
-\end{align}
-\]
+\end{align} $$
 
 The idea behind computing $m$ is that it is meant to cancel the residue modulo $R$: it makes $x + mN$ divisible by $R$:
 
@@ -40,6 +38,4 @@ Sice $m$ is in $\{0,1,...,R-1\}$, the value of $y$ is at most $2N - 1$.
 
 Finally, $y \equiv_N x R^{-1}$ because
 
-\[
-    y \equiv_N (x + mN) / R \equiv_N xR^{-1} + mNR^{-1} \equiv_N xR^{-1}
-\]
+$$ y \equiv_N (x + mN) / R \equiv_N xR^{-1} + mNR^{-1} \equiv_N xR^{-1} $$

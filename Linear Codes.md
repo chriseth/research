@@ -21,9 +21,7 @@ at the points $\alpha_1, \dots, \alpha_m$.
 
 Every matrix $G \in F^{m \times n}$ defines a linear code with message length $n$ and
 block length $m$. Its distance is defined as
-$$
-d = \min_{x \in F^n\setminus\{0\}} || G x ||_0.
-$$
+$$ d = \min_{x \in F^n\setminus\{0\}} || G x ||_0. $$
 Any two different messages will be encoded into codewords that differ in at least $d$ entries.
 
 A code with high distance allows us to detect errors by checking only some of the places
