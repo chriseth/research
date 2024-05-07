@@ -13,8 +13,8 @@ Want to check that $A = (a_1, \dots ,a_n)$ and $B = (b_1, \dots, b_n)$ are permu
 
 Observation: This is true if and only if the following polynomials are identical:
 
-$p_A(X) = \prod_{i=1}^n (X - a_i)$
-$p_B(X) = \prod_{i=1}^n (X - b_i)$
+$$p_A(X) = \prod_{i=1}^n (X - a_i) \qquad
+p_B(X) = \prod_{i=1}^n (X - b_i)$$
 
 **Idea:** Check the evaluation of the two polynomials at a random point.
 
