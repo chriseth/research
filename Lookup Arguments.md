@@ -21,8 +21,8 @@ a so-called "grand product argument":
 
 We can check $\frac{p_A(\beta)}{p_B(\beta)} = 1$ iteratively by addig a witness column $z$ and a random challenge $\beta$ with the following constraints:
 
-$z_1 = 1$,
-$z_{i+1} = z_i \frac{\beta - a_i}{\beta - b_i}$
+$$z_1 = 1, \qquad
+z_{i+1} = z_i \frac{\beta - a_i}{\beta - b_i}$$
 
 The actual check is achieved by the cyclic nature of the constraints.
 
