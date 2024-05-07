@@ -38,7 +38,7 @@ Idea: If $X$ changes, then it has to be equal to $Y$, i.e. $Y$ has to change at 
 
 To show $A \subseteq B$, show 
 
-#$ \prod_{i=1}^n (X - a_i) = \prod_{i=1}^n (X - b_i)^{m_i} $$
+$$ \prod_{i=1}^n (X - a_i) = \prod_{i=1}^n (X - b_i)^{m_i} $$
 
 where $m_i$ is the multiplicitiy of $b_i$ in $A$ (which can be zero).
 
@@ -61,4 +61,4 @@ So in the end we only need two additional columns.
 
 ### Logup + GKR
 
-By implementing fractions through their numerator-denominator representation, we do not have to commmit to the helper column. Instead, we comute the sum in a layered circuit.
+By implementing fractions through their numerator-denominator representation, we do not have to commmit to the helper column. Instead, we compute the sum in a layered circuit.
