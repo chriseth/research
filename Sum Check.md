@@ -12,39 +12,36 @@ The Sum-Check Protocol is an interactive protocol to compute
 
 $$ \sum_{b \in \{0,1\}^v} g(b), \qquad \text{for } g \in \mathbb{F}[X_1,\dots,X_v] $$
 
-where the verifier has oracle access to $g$.
+where the verifier has oracle access to $g$. It has a completeness error of zero and a soundness error of at most $\frac{v\,\mathrm{deg}(g)}{|\mathbb{F}|}$.
 
 ### Protocol
 
-#### Round 1:
+Let $g_0(X)$ be a constant polynomial that is the claimed sum and let $r_0 = 0$.
 
-Prover sends $H$ (the claimed sum) and
-
-$$ g_1(X_1) = \sum_{b \in \{0,1\}^{v-1}} g(X_1, b). $$
-
-Verifier checks that $g_1$ has the correct degree and checks $H = g_1(0) + g_1(1)$.
-
-Verifier sends a random $r_1 \in \mathbb{F}$.
-
-#### Round $j$, $1 < j < v$:
+#### Round $j \in \{1, \dots, v-1\}$:
 
 Prover sends
 
 $$ g_v(X_v) = \sum_{b \in \{0,1\}^{v-j}} g(r_1, \dots, r_{v-1}, X_v, b). $$
 
-Verifier checks that $g_v$ has the right degree and that $g_{v-1}(r_{v-1}) = g_v(0) + g_v(1)$.
+Verifier checks that $g_v$ has the right degree and that
+$$ g_v(0) + g_v(1) =  g_{v-1}(r_{v-1}) $$
 
 Verifier sends a random $r_j \in \mathbb{F}$.
 
 #### Round $v$:
 
-Verifier chooses a random $r_v \in \mathbb{F}$ and verifies that $g_{v-1}(r_{v-1}) = g(r_1,\dots, r_v)$.
+Verifier chooses a random $r_v \in \mathbb{F}$ and checks that $g_{v-1}(r_{v-1}) = g(r_1,\dots, r_v)$.
 
 This is the only step where oracle access to $g$ is needed, the other computations were all done on (low-degree) univariate polynomials.
 
-### Correctness
+### Correctness and Soundness
 
-Correctness is evident.
+Correctness is evident, soundness can be shown by induction on the number of rounds using the Schwartz-Zippel lemma.
 
-### Soundness
+### Cost analysis
 
+Ignoring the cost for the polynomial commitment, the prover sends $\mathrm{deg}(g)$ field elements, the verifier $v$, so the communication complexity is $O(\mathrm{deg}(g))$, which is also the bound on the runtime of the verifier.
+
+Concerning the runtime of the prover, in round $j$, the prover needs to compute a sum of $2^{v - j}$ polynomial evaluations. in total, these are
+$$ \sum_{j = 1}^v 2^{v - j} = O(2^v). $$
