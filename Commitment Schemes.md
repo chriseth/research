@@ -1,4 +1,4 @@
-#### KZG
+## KZG
 
 Relies on structured reference string consisting of $ S= ( g, g^{\tau}, \dots, g^{\tau^{n-1}}) $ for some $g \in \mathbb{F}$ and $\tau$, where $\tau$ is assumed to be unknown to the prover and verifier.
 
