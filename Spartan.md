@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Can be used for R1CS.
+Can be used for R1CS. The main novelty is to use a special protocol for evaluating sparse functions.
 
 R1CS: For given matrices $A, B, C$ over the finite field $\mathbb{F}$ is there a vector $w$ such that
 $$(A \cdot w) \circ (B \cdot w) = C \cdot w\qquad \text{?}$$
