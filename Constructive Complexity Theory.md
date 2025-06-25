@@ -20,3 +20,17 @@ If "Palindromes is not in $NTIME_1[n^{1.1}]$" is constructive, then we get new c
 Constructive proofs => refuters.
 
 "PV": Defined by Cook. Contemporary extension: $PV_1$: binary strings, classical logic, no infinite sets.
+
+Length-induction: Induction over words with the two cases "add $0$" and "add $1$".
+
+$I\Delta_0$: $(0, S, +, $\cdot$, $\le)$, all quantifiers bounded.
+
+### Barriers
+
+If P != NP, then "bad inputs for SAT algorithms can be efficiently constructed.".
+
+I.e. If `P != NP`, then there is a P-constructive separation of `P` and `NP`.
+
+This is actually true for many other class pairs.
+
+Uses self-reducibility of complete problems to find inconsistencies in algorithms and search-to-decision reduction.
